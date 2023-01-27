@@ -10,7 +10,6 @@ class MyClient(discord.Client):
     openai.api_key = openai_apikey
 
     async def on_ready(self):
-        #await MyClient.change_presence(status=MyClient.status.online, activity=MyClient.game("withlittlegirls"))
         print('Logged on as', self.user)
 
     async def on_message(self, message):
