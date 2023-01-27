@@ -7,7 +7,7 @@ discord_token = ''
 
 
 class MyClient(discord.Client):
-    openai.api_key = ''
+    openai.api_key = openai_apikey
 
     async def on_ready(self):
         #await MyClient.change_presence(status=MyClient.status.online, activity=MyClient.game("withlittlegirls"))
@@ -27,4 +27,4 @@ class MyClient(discord.Client):
 intents = discord.Intents.default()
 intents.message_content = True
 client = MyClient(intents=intents)
-client.run('')
+client.run(discord_token)
